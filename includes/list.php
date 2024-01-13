@@ -9,9 +9,6 @@ if (isset($_GET['id'])) {
   $query = "SELECT * FROM word ORDER BY word_name";
 }
 
-//echo $selected; //radio sort value
-//$query = "SELECT * FROM word ORDER BY $selected";
-
 $result = mysqli_query($link, $query);
 
 if (mysqli_num_rows($result) > 0){
