@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: zinkievich.iad1-mysql-e2-19a.dreamhost.com
--- Generation Time: Oct 07, 2023 at 12:47 PM
--- Server version: 8.0.28-0ubuntu0.20.04.3
--- PHP Version: 8.1.2-1ubuntu2.14
+-- Host: localhost
+-- Generation Time: May 25, 2024 at 06:37 PM
+-- Server version: 8.0.31-0ubuntu0.20.04.2
+-- PHP Version: 8.2.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,8 +18,9 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `basic`
+-- Database: `saneodmw_basicapp`
 --
+
 -- --------------------------------------------------------
 
 --
@@ -32,7 +33,7 @@ CREATE TABLE `song` (
   `song_artist` varchar(45) NOT NULL,
   `episodes` text,
   `performer_id` int DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `song`
@@ -125,7 +126,7 @@ CREATE TABLE `word` (
   `word_name` varchar(45) NOT NULL,
   `definition` text NOT NULL,
   `example` text
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `word`
@@ -135,39 +136,26 @@ INSERT INTO `word` (`word_id`, `word_name`, `definition`, `example`) VALUES
 (1, 'Basic', 'adj. 1. forming an essential foundation or starting point; fundamental.', 'certain basic rules must be obeyed'),
 (2, 'Brilliant', '1. (of light or color) very bright and radiant.', 'brilliant sunshine illuminated the scene');
 
--- --------------------------------------------------------
-
-
 --
 -- Indexes for dumped tables
 --
+
 --
 -- Indexes for table `song`
 --
 ALTER TABLE `song`
   ADD PRIMARY KEY (`song_id`);
 
--
 --
--- Indexes for table `word`
+-- AUTO_INCREMENT for dumped tables
 --
-ALTER TABLE `word`
-  ADD PRIMARY KEY (`word_id`),
-  ADD UNIQUE KEY `word_id_UNIQUE` (`word_id`);
-
 
 --
 -- AUTO_INCREMENT for table `song`
 --
 ALTER TABLE `song`
   MODIFY `song_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=76;
-
-
---
--- AUTO_INCREMENT for table `word`
---
-ALTER TABLE `word`
-  MODIFY `word_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=109;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
