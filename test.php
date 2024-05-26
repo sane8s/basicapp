@@ -6,7 +6,7 @@ echo "Success: A proper connection to MySQL was made! The $dbname database is gr
 echo "Host information: " . mysqli_get_host_info($link) . PHP_EOL;
 
 // Perform query and return number of rows.
-if ($result = mysqli_query($link, "SELECT * FROM poster;")) {
+if ($result = mysqli_query($link, "SELECT * FROM word;")) {
   echo "Returned rows are: " . mysqli_num_rows($result);
   // Free result set
   mysqli_free_result($result);
