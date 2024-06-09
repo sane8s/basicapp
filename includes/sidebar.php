@@ -3,7 +3,7 @@
         <div class="col-md-4 themed-grid-col">               
             <div class="row p-2">
                 <div class="p-3 border bg-light">
-                    <h2>Ganz Spontan</h2>
+                    <h2>Is it Basic?</h2>
                         <?php include 'includes/random.php';?>
                 </div>
             </div>
